@@ -1,11 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
-import { City } from './entities/city.entity';
+import { CityModel } from './models/city.model';
+import { LocationModel } from './models/location.model';
 
 @Injectable()
 export class LocationsHelper {
-  getFromCity(city) {
+  getFromCity(city: CityModel): LocationModel {
     return {
       id: city.id,
       city: city.name,
