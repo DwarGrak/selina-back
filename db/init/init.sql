@@ -30,4 +30,4 @@ CREATE TABLE bookings (
 );
 ALTER TABLE bookings ADD CONSTRAINT bookings_room_types_fk FOREIGN KEY (room_type_id) REFERENCES room_types(id);
 ALTER TABLE bookings ADD CONSTRAINT bookings_cities_fk FOREIGN KEY (city_id) REFERENCES cities(id);
-INSERT INTO bookings(id,city_id,room_type_id,dates) VALUES(1,3,2,'[2020-01-01,2030-01-01)');
+INSERT INTO bookings(id,city_id,room_type_id,dates) VALUES(1,3,2,'[2020-01-01,2030-01-01]'),(2,3,3,'[2025-01-01,2030-01-01]'),(3,3,3,'[2025-01-01,2035-01-01]');
