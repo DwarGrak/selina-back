@@ -12,6 +12,6 @@ export class BookingController {
     @Query('start_date', ParseDatePipe) startDate: string,
     @Query('end_date', ParseDatePipe) endDate: string,
   ) {
-    return this.bookingService.getAvailable(cityId, startDate, endDate);
+    return this.bookingService.getAvailableRoomTypes(cityId, startDate, endDate);
   }
 }

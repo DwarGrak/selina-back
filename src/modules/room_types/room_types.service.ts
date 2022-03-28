@@ -16,6 +16,6 @@ export class RoomTypesService {
   async getList(): Promise<RoomTypeModel[]> {
     if (!this.cachedList)
       this.cachedList = await this.roomTypeRepository.find();
-    return this.cachedList;
+    return [...this.cachedList];
   }
 }
