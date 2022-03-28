@@ -1,5 +1,5 @@
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Booking } from './modules/booking/booking.entity';
+import { Booking } from './modules/booking/entities/booking.entity';
 import { City } from './modules/locations/entities/city.entity';
 import { Country } from './modules/locations/entities/country.entity';
 import { RoomType } from './modules/room_types/room_types.entity';
