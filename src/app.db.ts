@@ -1,8 +1,8 @@
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Booking } from './modules/booking/entities/booking.entity';
-import { City } from './modules/locations/entities/city.entity';
-import { Country } from './modules/locations/entities/country.entity';
-import { RoomType } from './modules/room_types/room_types.entity';
+import { Booking } from './booking/entities/booking.entity';
+import { City } from './locations/entities/city.entity';
+import { Country } from './locations/entities/country.entity';
+import { RoomType } from './room_types/room_types.entity';
 
 export const AppDB = TypeOrmModule.forRoot({
   type: 'postgres',
