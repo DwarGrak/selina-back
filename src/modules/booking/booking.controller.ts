@@ -6,12 +6,15 @@ import {
   ParseIntPipe,
   Post,
   Query,
+  UseGuards,
 } from '@nestjs/common';
 import { ParseDatePipe } from 'src/pipes/parse_date.pipe';
+import { AuthJwtGuard } from '../auth/auth.jwt.guard';
 import { BookingService } from './booking.service';
 import { CreateBookingDto } from './dto/create_booking.dto';
 
 @Controller('booking')
+@UseGuards(AuthJwtGuard)
 export class BookingController {
   constructor(private readonly bookingService: BookingService) {}
 
